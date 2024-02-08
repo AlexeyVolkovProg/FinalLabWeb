@@ -5,6 +5,10 @@ import com.example.finallabback.dto.UserCredentials;
 import jakarta.persistence.*;
 import lombok.*;
 
+
+/**
+ * Сущность отвечающая, за хранение пользователей
+ */
 @Getter
 @Setter
 @AllArgsConstructor

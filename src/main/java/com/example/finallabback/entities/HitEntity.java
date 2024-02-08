@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import lombok.*;
 
 
+/**
+ * Сущность используется для хранения точек и их статуса попадания или нет
+ */
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -42,7 +46,4 @@ public class HitEntity {
     public HitResult toHitResult(){
         return new HitResult(x, y, r, creationTime, result);
     }
-
-
-
 }
