@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
+
+/**
+ * Класс отвечающий за обработку запросов, которые приходят от неавторизованных пользователей
+ */
 @Component
 public class AuthEntryPoint implements AuthenticationEntryPoint {
 
@@ -19,4 +23,5 @@ public class AuthEntryPoint implements AuthenticationEntryPoint {
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
 
     }
+
 }
