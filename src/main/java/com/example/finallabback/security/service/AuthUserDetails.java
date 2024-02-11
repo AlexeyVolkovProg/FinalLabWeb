@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.io.Serial;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Objects;
 
 
 @AllArgsConstructor
@@ -93,6 +94,14 @@ public class AuthUserDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AuthUserDetails user = (AuthUserDetails) o;
+        return Objects.equals(id, user.id);
     }
 
 

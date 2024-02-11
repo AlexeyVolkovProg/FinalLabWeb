@@ -23,13 +23,13 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<AuthorizedUserCredentials> login ( @RequestBody UserCredentials userCredentials){
+    public ResponseEntity<AuthorizedUserCredentials> login (@Validated @RequestBody UserCredentials userCredentials){
         AuthorizedUserCredentials credentials = userService.login(userCredentials);
         return ResponseEntity.ok(credentials);
     }
 
     @PostMapping("/signup")
-    public ResponseEntity<AuthorizedUserCredentials> signup( @RequestBody UserCredentials userCredentials){
+    public ResponseEntity<AuthorizedUserCredentials> signup(@Validated @RequestBody UserCredentials userCredentials){
         AuthorizedUserCredentials credentials = userService.signUp(userCredentials);
         return ResponseEntity.ok(credentials);
     }

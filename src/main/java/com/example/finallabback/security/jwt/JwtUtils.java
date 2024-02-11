@@ -51,12 +51,11 @@ public class JwtUtils {
         try {
             return getParsedToken(authToken).getBody().getSubject();
         } catch (Exception e) {
+            System.out.println("Ошибка при доставании мени из jwt токена имени");
             return null;
         }
     }
 
-
-    //todo доработать обработку исключений
     public boolean validateJwtToken(String authToken){
         try {
             getParsedToken(authToken);
