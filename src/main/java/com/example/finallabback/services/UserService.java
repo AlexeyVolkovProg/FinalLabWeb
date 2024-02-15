@@ -5,7 +5,6 @@ import com.example.finallabback.dto.UserCredentials;
 import com.example.finallabback.entities.UserEntity;
 import com.example.finallabback.repositories.UserRepository;
 import com.example.finallabback.security.jwt.JwtUtils;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,6 +15,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 

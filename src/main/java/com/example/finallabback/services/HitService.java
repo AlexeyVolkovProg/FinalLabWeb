@@ -6,10 +6,10 @@ import com.example.finallabback.dto.HitResult;
 import com.example.finallabback.entities.HitEntity;
 import com.example.finallabback.repositories.HitRepository;
 import com.example.finallabback.utils.AreaCheck;
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
